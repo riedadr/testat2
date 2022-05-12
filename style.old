@@ -9,24 +9,21 @@ body {
     --text: black;
     --card: rgba(212, 212, 216, 0.5);
 
-    --sky: #be91c6;
-    --horizon: #fea798;
+    --v1: #be91c6;
+    --v2: #8a65cc;
+    --v3: #5e30d9;
+    --transparentv3: #5e30d900;
+    --v4: #3b1895;
+    --s1: #fea798;
+    --s2: #ff846e;
     --cloud: #fea798;
-
-    --edge:  #fea79855;
-    --water: #ff846e;
-    --grass: #ff846e;
-    --shore: #8a65cc;
-
-    --plantsFG: #3b1895;
-    --plantsBG: #5e30d9;
-    --transparent: #00000000;
 
     --nav-height: 4rem;
 
     --sun-height: 15%;
     --sun-reflection-height: 85%;
     --sun-reflection-opacity: 0;
+    --sun-set: none;
 
 
 
@@ -36,24 +33,13 @@ body {
 }
 
 body.dark {
-    --cloud: #1e3a8a;
-    --sky: #18181b;
-    --horizon: #0f1d43;
-
-    --edge:  #0f1d4348;
-    --water: #1e3a8a;
-    --shore: #091126;
-    
-    --grass: #192e66;
-    --plantsFG: #192e66;
-    --plantsBG: #1e3a8a;
-
     --text: white;
     --card: rgba(82, 82, 91, 0.5);
 
-    --sun-height: 70%;
-    --sun-reflection-height: 30%;
+    --sun-height: 85%;
+    --sun-reflection-height: 15%;
     --sun-reflection-opacity: 1;
+    --sun-set: block;
 }
 
 
@@ -78,26 +64,23 @@ body.dark {
     bottom: 0;
     left: 0;
     right: 0;
-    transition: 1s ease-in-out;
 }
 
 .landscape {
     height: 100vh;
-    background-image: linear-gradient(var(--sky), var(--horizon), var(--sky));
+    background-image: linear-gradient(var(--v1), var(--s1), var(--v1));
     position: relative;
     z-index: -999;
     overflow: hidden;
-    transition: 1s ease-in-out;
 }
 
 .lotus {
     width: 10vmin;
     height: 5vmin;
-    background: conic-gradient(var(--plantsBG) 0deg 40deg,
-            var(--transparent) 50deg 70deg,
-            var(--plantsBG) 80deg);
+    background: conic-gradient(var(--v3) 0deg 40deg,
+            var(--transparentv3) 50deg 70deg,
+            var(--v3) 80deg);
     border-radius: 50%;
-    transition: 1s ease-in-out;
 }
 
 .lotus-1 {
@@ -137,7 +120,6 @@ body.dark {
     transform: translate3d(-150vmin, 0, 0);
     animation: clouds 120s infinite;
     animation-delay: -10s;
-    transition: 1s ease-in-out;
 }
 
 @keyframes clouds {
@@ -164,7 +146,7 @@ body.dark {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(var(--edge), var(--shore));
+    background: linear-gradient(#fea79855, var(--v2));
     overflow: hidden;
     box-shadow: inset 0 1px 4px -3px white;
 }
@@ -174,15 +156,14 @@ body.dark {
     left: 0;
     height: 20vmin;
     width: 40vmin;
-    background: var(--plantsFG);
+    background: var(--v4);
     box-shadow: inset 0 0 20px -5px rgba(0, 0, 0, 0.2);
     border-radius: 0% 200% 0 0/0% 200%;
-    transition: 1s ease-in-out;
 }
 
 .stone:after {
     content: "";
-    background: var(--plantsBG);
+    background: var(--v3);
     width: 100%;
     height: 100%;
     right: -15%;
@@ -190,7 +171,6 @@ body.dark {
     z-index: -1;
     transform: scaleX(1.3) skew(10deg);
     box-shadow: inset 0 0 20px -5px rgba(0, 0, 0, 0.4);
-    transition: 1s ease-in-out;
 }
 
 .grass {
@@ -198,19 +178,18 @@ body.dark {
     width: 10vmin;
     border-radius: 0 60% 0 0/0 100% 0 0;
     bottom: 0;
-    border-right: 5px solid var(--plantsFG);
-    box-shadow: 1px 0 0 var(--horizon);
-    filter: drop-shadow(-0.5vmin 6vmin 0 var(--grass)) drop-shadow(-4.5vmin 10vmin 0 var(--plantsBG));
-    transition: 1s ease-in-out;
+    border-right: 5px solid var(--v4);
+    box-shadow: 1px 0 0 var(--s1);
+    filter: drop-shadow(-0.5vmin 6vmin 0 var(--s2)) drop-shadow(-4.5vmin 10vmin 0 var(--v3));
 }
 
 .grass-1 {
     left: 14vmin;
     bottom: -2vmin;
     transform: scaleX(-1);
-    box-shadow: 2px 0 0 var(--plantsFG);
-    border-color: var(--plantsBG);
-    filter: drop-shadow(-1vmin 5vmin 0 var(--plantsBG)) drop-shadow(-80vmin 5vmin 0 var(--plantsFG));
+    box-shadow: 2px 0 0 var(--v4);
+    border-color: var(--v3);
+    filter: drop-shadow(-1vmin 5vmin 0 var(--v3)) drop-shadow(-80vmin 5vmin 0 var(--v4));
 }
 
 .grass-2 {
@@ -237,24 +216,23 @@ body.dark {
     width: 0.5vmin;
     bottom: 0;
     left: 10vmin;
-    color: var(--plantsFG);
+    color: var(--v4);
     background: currentColor;
     transform-origin: bottom center;
     transform: rotate(4deg);
-    box-shadow: inset -1px 0 0 var(--grass), -6vmin 3vmin 0 0, 80vmin 0 0 0;
+    box-shadow: inset -1px 0 0 var(--s2), -6vmin 3vmin 0 0, 80vmin 0 0 0;
     animation: verticalise 20s infinite;
-    transition: 1s ease-in-out;
 }
 
 .reed-1 {
-    color: var(--grass);
+    color: var(--s2);
     left: 15vmin;
     height: 50vmin;
     bottom: -5vmin;
     transform: rotate(-2deg);
     animation: verticalise-1 20s infinite;
-    box-shadow: inset -1px 0 0 var(--horizon), 6vmin 13vmin 0 0 var(--horizon),
-        80vmin 10vmin 0 0 var(--plantsBG);
+    box-shadow: inset -1px 0 0 var(--s1), 6vmin 13vmin 0 0 var(--s1),
+        80vmin 10vmin 0 0 var(--v3);
 }
 
 .reed:after {
@@ -300,15 +278,26 @@ body.dark {
     height: 50%;
 }
 
+.sun-container-1:after {
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 60% 100%, var(--s2), transparent);
+    opacity: var(--sun-reflection-opacity);
+    mix-blend-mode: color-burn;
+    transition: 1s ease-in-out;
+
+}
 
 .sun-container-reflection {
     top: 50%;
-    background: radial-gradient(circle at 60% 0%, var(--water), transparent);
-    transition: 1s ease-in-out;
+    background: radial-gradient(circle at 60% 0%, var(--s2), transparent);
 }
 
 .sun-container-reflection .sun {
-    background: linear-gradient(white, transparent);
+    background: linear-gradient(white, rgba(255, 255, 255, 0));
     box-shadow: none;
     filter: blur(5px);
     opacity: 1;
@@ -320,8 +309,8 @@ body.dark {
 .splash {
     width: 8vmin;
     height: 3vmin;
-    border: 2px solid var(--horizon);
-    box-shadow: 0 0 2px var(--horizon);
+    border: 2px solid var(--s1);
+    box-shadow: 0 0 2px var(--s1);
     border-radius: 50%;
     bottom: 5vmin;
     left: 70%;
@@ -425,7 +414,6 @@ section {
         transition: 1s ease-in-out;
 
         #dashboard {
-            
             margin-top: 1rem;
             gap: 2rem;
             display: grid;
@@ -435,8 +423,6 @@ section {
             justify-content: space-between;
             flex-wrap: wrap;
             */
-
-            
 
             list-style: none;
 
