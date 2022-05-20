@@ -2,7 +2,7 @@ body {
     --red: #EF4444;
     --orange: #F97316;
     --yellow: #eab308;
-    --green: #22C55E;
+    --green: #16a34a;
     --blue: #3B82F6;
     --violet: #8B5CF6;
     --pink: #EC4899;
@@ -20,16 +20,19 @@ body {
     --dark-water-bottom: #091126;
 
     --nav-height: 4rem;
+    --footer-height: 2rem;
 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
         "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
 
+
     --text: black;
+    --bg: rgb(212, 212, 216);
     --card: rgba(212, 212, 216, 0.5);
 
     --cloud: #fea798;
-    
+
     --grass: #ff846e;
     --grass1: #fea798;
 
@@ -44,10 +47,11 @@ body {
 
 body.dark {
     --text: white;
+    --bg: rgb(82, 82, 91);
     --card: rgba(82, 82, 91, 0.5);
 
     --cloud: #1e3a8a;
-    
+
     --grass: #192e66;
     --grass1: #0f1d43;
 
@@ -58,7 +62,6 @@ body.dark {
     --water-scroll: -150vh;
     --sky-scroll: 0;
     --light-rotation: 180deg;
-
 }
 
 
@@ -69,6 +72,259 @@ body.dark {
     margin: 0;
     padding: 0;
 }
+
+div#database {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+
+    border-radius: 0.25rem;
+    backdrop-filter: blur(5px);
+    background-color: var(--card);
+    color: var(--text);
+    transition: 1s ease-in-out;
+
+    button {
+        height: 100%;
+        aspect-ratio: 1;
+
+        background-color: transparent;
+        border: none;
+        font-size: larger;
+        cursor: pointer;
+    }
+
+    table {
+        margin-top: 1rem;
+
+        th {
+            text-align: left;
+        }
+    }
+
+}
+
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    header {
+        width: 100%;
+        height: var(--nav-height);
+        padding: 1rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        backdrop-filter: blur(5px);
+        background-color: var(--card);
+        color: var(--text);
+        transition: 1s ease-in-out;
+
+        button {
+            height: 2rem;
+            width: 2rem;
+            padding: 0.25rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: transparent;
+            border: 2px solid var(--yellow);
+            border-radius: 0.25rem;
+
+            cursor: pointer;
+
+
+            color: white;
+            font-size: large;
+        }
+    }
+
+    main {
+        height: calc(100vh - var(--nav-height) - var(--footer-height));
+        overflow-y: auto;
+        padding: 4rem;
+        color: var(--text);
+        transition: 1s ease-in-out;
+
+        #dashboard {
+
+            margin-top: 1rem;
+            gap: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+            /*
+            display: flex;
+            flex-wrap: wrap;
+            */
+
+
+
+            list-style: none;
+
+            li {
+                padding: 1rem;
+
+                border-radius: 0.25rem;
+                backdrop-filter: blur(5px);
+                background-color: var(--card);
+                color: var(--text);
+                transition: 1s ease-in-out;
+
+                .result {
+                    margin-top: 0.5rem;
+                    padding-top: 0.5rem;
+
+                    border-top: 1px solid var(--card);
+                }
+            }
+
+            #fr1 {
+                progress[value] {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    border: none;
+                    background-color: var(--red);
+                }
+
+                progress[value]::-webkit-progress-bar {
+                    background-color: var(--red);
+                }
+
+                progress[value]::-webkit-progress-value {
+                    background: var(--green);
+                }
+
+                progress[value]::-moz-progress-bar {
+                    background: var(--green);
+                }
+
+            }
+
+            #fr5 {
+                ul {
+                    margin-left: 1rem;
+                }
+
+                li {
+                    padding: 0;
+                    backdrop-filter: none;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    footer {
+        height: var(--footer-height);
+        backdrop-filter: blur(5px);
+        background-color: var(--card);
+        color: var(--text);
+        transition: 1s ease-in-out;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        button {
+            padding: 0.5rem;
+            height: 1var(--footer-height);
+
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            border: none;
+            background-color: transparent;
+            color: var(--text);
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+
+            &:hover {
+                background-color: var(--violet);
+            }
+        }
+
+        a {
+            height: var(--footer-height);
+            width: 100%;
+
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+            color: var(--text);
+            transition: 200ms ease-in-out;
+
+            
+            &:hover {
+                background-color: var(--green);
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    section main {
+        padding: 1rem;
+    }
+}
+
+/* Utility-Classes */
+
+.width-full {
+    width: 100%;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.red {
+    color: var(--red);
+}
+
+.orange {
+    color: var(--orange);
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.green {
+    color: var(--green);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.violet {
+    color: var(--violet);
+}
+
+.pink {
+    color: var(--pink);
+}
+
+
+/* Ab hier Styling für Hintergrund */
 
 .landscape:after,
 .landscape:before,
@@ -144,6 +400,15 @@ body.dark {
     transition: 1s ease-in-out;
 }
 
+.cloud-1 {
+    left: 60vmin;
+    top: 15vmin;
+    opacity: 0.2;
+    filter: blur(1px);
+    animation-delay: 0;
+    animation-duration: 100s;
+}
+
 @keyframes clouds {
     50% {
         transform: translate3d(0, 0, 0);
@@ -154,14 +419,6 @@ body.dark {
     }
 }
 
-.cloud-1 {
-    left: 60vmin;
-    top: 15vmin;
-    opacity: 0.2;
-    filter: blur(1px);
-    animation-delay: 0;
-    animation-duration: 100s;
-}
 
 
 /*
@@ -189,10 +446,10 @@ Wenn nun das Theme gewechselt wird, wird an die entsprechende Stelle auf dem Far
 
     #light {
         position: absolute;
-        top: 50%;
+        bottom: calc(75vh / -2);
         left: 50%;
-        height: 50vh;
-        width: 50vh;
+        height: 75vh;
+        width: 75vh;
         transform: translate(-50%) rotate(var(--light-rotation));
         transition: 1s ease-in-out;
 
@@ -204,6 +461,8 @@ Wenn nun das Theme gewechselt wird, wird an die entsprechende Stelle auf dem Far
             border-radius: 50%;
             width: 10rem;
             height: 10rem;
+            max-height: 40%;
+            max-width: 40%;
             box-shadow: 0 0 10px white;
             transition: 1s ease-in-out;
         }
@@ -216,6 +475,8 @@ Wenn nun das Theme gewechselt wird, wird an die entsprechende Stelle auf dem Far
             border-radius: 50%;
             width: 5rem;
             height: 5rem;
+            max-height: 30%;
+            max-width: 30%;
             box-shadow: 0 0 10px white;
             transition: 1s ease-in-out;
         }
@@ -265,6 +526,7 @@ Wenn nun das Theme gewechselt wird, wird an die entsprechende Stelle auf dem Far
     transition: 1s ease-in-out;
 }
 
+
 .grass {
     height: 40vmin;
     width: 10vmin;
@@ -292,7 +554,6 @@ Wenn nun das Theme gewechselt wird, wird an die entsprechende Stelle auf dem Far
     bottom: -2vmin;
     transform: scaleX(-1);
 }
-
 
 
 .reed {
@@ -357,8 +618,6 @@ Wenn nun das Theme gewechselt wird, wird an die entsprechende Stelle auf dem Far
     }
 }
 
-
-
 .splash {
     width: 8vmin;
     height: 3vmin;
@@ -417,81 +676,4 @@ Wenn nun das Theme gewechselt wird, wird an die entsprechende Stelle auf dem Far
 
 .delay-6 {
     animation-delay: 6s;
-}
-
-
-section {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    header {
-        width: 100%;
-        height: var(--nav-height);
-        padding: 1rem;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        backdrop-filter: blur(4px);
-        background-color: var(--card);
-        color: var(--text);
-        transition: 1s ease-in-out;
-
-        button {
-            height: 2rem;
-            width: 2rem;
-            padding: 0.25rem;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            background-color: transparent;
-            border: 2px solid var(--yellow);
-            border-radius: 0.25rem;
-
-            cursor: pointer;
-
-
-            color: white;
-            font-size: large;
-        }
-    }
-
-    main {
-        padding: 5rem;
-        color: var(--text);
-        transition: 1s ease-in-out;
-
-        #dashboard {
-
-            margin-top: 1rem;
-            gap: 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            /*
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            */
-
-
-
-            list-style: none;
-
-            li {
-                padding: 1rem;
-
-                border-radius: 0.25rem;
-                backdrop-filter: blur(5px);
-                background-color: var(--card);
-                color: var(--text);
-                transition: 1s ease-in-out;
-            }
-        }
-    }
 }
