@@ -10,7 +10,6 @@
 
 <body>
     <h1>DB-Test</h1>
-    <p>g</p>
     <?php
     $servername = "sql.t2.cit116.xyz";
     $username = "dev-urlaub";
@@ -23,8 +22,8 @@
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
-
-    $sql = "SELECT id, user, frage1, frage2, frage3, frage4, frage5 FROM 'urlaub-table'";
+    
+    $sql = "SELECT id, user, frage1, frage2, frage3, frage4, frage5 FROM `urlaub-table`";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
@@ -32,11 +31,14 @@
         while ($row = mysqli_fetch_assoc($result)) {
             echo "entry: " . $row["id"] . " | " . $row["user"] . " | " . $row["frage1"] . " | " . $row["frage2"] . " | " . $row["frage3"] . " | " . $row["frage4"] . " | " . $row["frage5"] . "<br>";
         }
+        
     } else {
         echo "0 results";
     }
 
     mysqli_close($conn);
+
+    //INSERT INTO `urlaub-table` VALUES (2, "Walther", false, 5, "Flugzeug", "Berge", "Tirol");
     ?>
 </body>
 
