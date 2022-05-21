@@ -297,21 +297,51 @@
 				<i class="fa-solid fa-database"></i> DB
 			</button>
 			<a href="#noch_nicht_verfügbar">
-				<div>
-					an Umfrage teilnehmen
-					<i class="fa-solid fa-play"></i>
-				</div>
+				an Umfrage teilnehmen
+				<i class="fa-solid fa-play"></i>
 			</a>
-			<button onclick="toggleDB()">
+			<button onclick="toggleInfo()">
 				<i class="fa-solid fa-circle-info"></i> Info
 			</button>
 		</footer>
 	</section>
+	<section id="info"  style="display: none;">
+		<div class="modal">
+			<div class="flex-between">
+				<h1>Informationen</h1>
+				<button class="red transparent" onclick="toggleInfo()">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+			</div>
+			<p>Diese Umfrage wurde im Rahmen der zweiten Testats für Web-Development 1 von Adrian Riedel und Christopher Förster erstellt.</p>
+			<h2>Hinweise</h2>
+			<ul>
+				<li>Icons von <a href="https://fontawesome.com/" target="_blank" rel="noreferrer">Fontawesome</a></li>
+				<li>Hintergrund von <a href="https://codepen.io/pehaa/pen/yLVeLNg" target="_blank" rel="noreferrer">codepen.io</a>; übernommen wurden Sonne, Wolken und Pflanzen. Himmel und Meer würden für dark/light Mode überarbeitet.</li>
+			
+			
+			</ul>
+
+			<a id="start-btn" href="#noch_nicht_verfügbar">
+				an Umfrage teilnehmen
+				<i class="fa-solid fa-play"></i>
+			</a>
+		</div>
+	</section>
 	<script type="text/javascript">
+		if (!localStorage.visited) toggleInfo();
+		localStorage.visited = true;
+
 		function toggleDB() {
 			const db = document.getElementById("database");
 			let toggle = db.style.display === "none" ? "block" : "none";
 			db.style.display = toggle;
+		}
+
+		function toggleInfo() {
+			const info = document.getElementById("info");
+			let toggle = info.style.display === "none" ? "block" : "none";
+			info.style.display = toggle;
 		}
 	</script>
 
