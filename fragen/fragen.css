@@ -138,7 +138,7 @@ section main::-webkit-scrollbar {
 	display: none;
 }
 
-section main div#fragen {
+section main div#fragen-modal {
 	height: 100%;
 	width: 100%;
 	padding: 1rem;

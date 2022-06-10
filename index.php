@@ -50,12 +50,10 @@
 	<!-- Ab hier Seiteninhalt -->
 	<section>
 		<header>
-			<h1>Urlaubsumfrage</h1>
+			<h1>Ergebnisse</h1>
 			<button id="themeBtn" title="switch theme" onclick="switchTheme()"></button>
 		</header>
 		<main>
-			<h1>Ergebnisse</h1>
-
 			<div id="database" style="display: none;">
 				<div class="flex-between">
 					<h1>Datenbank</h1>
