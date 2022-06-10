@@ -25,6 +25,10 @@
 
 					<div class="antwort">
 						<p>Ja / Nein</p>
+						<label class="switch">
+							<input type="checkbox">
+							<span class="slider round"></span>
+						  </label>
 					</div>
 				</div>
 				<div class="steuerung">
@@ -39,7 +43,13 @@
 					<p>Wie viele verschieden Länder hast du bereits besucht?</p>
 
 					<div class="antwort">
-						<p>Zahl eingeben</p>
+						<p>Gib eine Zahl ein</p>
+						<input
+									type="number"
+									id="länder"
+									name="länder"
+									placeholder="z.B. Italien, Österreich oder Spanien"
+								/>
 					</div>
 				</div>
 				<div class="steuerung">
@@ -59,7 +69,57 @@
 					</p>
 
 					<div class="antwort">
-						<p>Multiple Choice</p>
+						<fieldset>
+							<legend>Wähle einen Ort aus:</legend>
+
+							<div>
+								<input
+									type="checkbox"
+									id="bus"
+									name="ziele"
+									value="bus"
+								/>
+								<label for="bus">Bus</label>
+							</div>
+
+							<div>
+								<input
+									type="checkbox"
+									id="zug"
+									name="ziele"
+									value="zug"
+								/>
+								<label for="zug">Zug</label>
+							</div>
+
+							<div>
+								<input
+									type="checkbox"
+									id="flugzeug"
+									name="ziele"
+									value="flugzeug"
+								/>
+								<label for="flugzeug">Berge</label>
+							</div>
+							<div>
+								<input
+									type="checkbox"
+									id="land"
+									name="ziele"
+									value="land"
+								/>
+								<label for="land">Land</label>
+							</div>
+							<div>
+								<input
+									type="checkbox"
+									id="stadt"
+									name="ziele"
+									value="stadt"
+								/>
+								<label for="stadt">Stadt</label>
+							</div>
+						</fieldset>
 					</div>
 				</div>
 				<div class="steuerung">
@@ -76,9 +136,60 @@
 					<p>Wo machst du am liebsten Urlaub?</p>
 
 					<div class="antwort">
-						<p>Single Choice</p>
+						<fieldset>
+							<legend>Wähle einen Ort aus:</legend>
+
+							<div>
+								<input
+									type="radio"
+									id="see"
+									name="ziele"
+									value="see"
+								/>
+								<label for="see">See</label>
+							</div>
+
+							<div>
+								<input
+									type="radio"
+									id="meer"
+									name="ziele"
+									value="meer"
+								/>
+								<label for="meer">Meer</label>
+							</div>
+
+							<div>
+								<input
+									type="radio"
+									id="flugzeug"
+									name="ziele"
+									value="flugzeug"
+								/>
+								<label for="flugzeug">Flugzeug</label>
+							</div>
+							<div>
+								<input
+									type="radio"
+									id="auto"
+									name="ziele"
+									value="auto"
+								/>
+								<label for="auto">Auto</label>
+							</div>
+							<div>
+								<input
+									type="radio"
+									id="boot"
+									name="ziele"
+									value="boot"
+								/>
+								<label for="boot">Boot/Schiff</label>
+							</div>
+						</fieldset>
 					</div>
 				</div>
+
 				<div class="steuerung">
 					<button class="back" onclick="scrollToArea(3)">
 						Zurück
@@ -93,11 +204,17 @@
 					<p>In welchem Land hat es dir bisher am besten gefallen?</p>
 
 					<div class="antwort">
-						<p>Freitext</p>
+						<p>Gib ein Land ein</p>
+						<input
+									type="text"
+									id="bestesLand"
+									name="bestesLand"
+									placeholder="z.B. Italien, Österreich oder Spanien"
+								/>
 					</div>
 				</div>
 				<div class="steuerung">
-					<button class="back" onclick='scrollToArea(4)'>
+					<button class="back" onclick="scrollToArea(4)">
 						Zurück
 					</button>
 					<button class="ok" onclick="senden()">Abschicken</button>
@@ -105,7 +222,9 @@
 			</section>
 		</main>
 		<footer>
-			<button class="nav-btn" id="active" onclick="scrollToArea(1)">Frage 1</button>
+			<button class="nav-btn" id="active" onclick="scrollToArea(1)">
+				Frage 1
+			</button>
 			<button class="nav-btn" onclick="scrollToArea(2)">Frage 2</button>
 			<button class="nav-btn" onclick="scrollToArea(3)">Frage 3</button>
 			<button class="nav-btn" onclick="scrollToArea(4)">Frage 4</button>
@@ -128,10 +247,7 @@
 					if (i == section - 1) navBtns.item(i).id = "active";
 					else navBtns.item(i).id = "";
 					i++;
-
 				}
-
-
 			}
 
 			function senden() {
