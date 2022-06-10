@@ -17,103 +17,126 @@
 				onclick="switchTheme()"
 			></button>
 		</header>
-		<main>
-			<section id="fragen">
-				<div class="frage" id="frage1">
-					<div class="inhalt">
-						<h1>Frage 1:</h1>
-						<p>Warst du bereits in Italien?</p>
+		<main id="fragen">
+			<section class="frage" id="section1">
+				<div class="inhalt">
+					<h1>Frage 1:</h1>
+					<p>Warst du bereits in Italien?</p>
 
-                        <div class="antwort">
-                            <p>Ja / Nein</p>
-                        </div>
-					</div>
-					<div class="steuerung">
-						<button class="back">Zurück</button>
-						<button class="ok" onclick='scrollToArea("frage2")'>
-							Weiter
-						</button>
+					<div class="antwort">
+						<p>Ja / Nein</p>
 					</div>
 				</div>
+				<div class="steuerung">
+					<button class="back">Zurück</button>
+					<button class="ok" onclick="scrollToArea(2)">Weiter</button>
+				</div>
+			</section>
 
+			<section class="frage" id="section2">
+				<div class="inhalt">
+					<h1>Frage 2:</h1>
+					<p>Wie viele verschieden Länder hast du bereits besucht?</p>
 
-				<div class="frage" id="frage2">
-					<div class="inhalt">
-						<h1>Frage 2:</h1>
-						<p>Wie viele verschieden Länder hast du bereits besucht? p>
-
-                        <div class="antwort">
-                            <p>Zahl eingeben</p>
-                        </div>
-					</div>
-					<div class="steuerung">
-						<button class="back" onclick='scrollToArea("frage1")'>Zurück</button>
-						<button class="ok" onclick='scrollToArea("frage3")'>Weiter</button>
+					<div class="antwort">
+						<p>Zahl eingeben</p>
 					</div>
 				</div>
+				<div class="steuerung">
+					<button class="back" onclick="scrollToArea(1)">
+						Zurück
+					</button>
+					<button class="ok" onclick="scrollToArea(3)">Weiter</button>
+				</div>
+			</section>
 
+			<section class="frage" id="section3">
+				<div class="inhalt">
+					<h1>Frage 3:</h1>
+					<p>
+						Welche Verkehrsmittel hast du bisher benutzt, um an
+						deinen Urlaubsort zu kommen?
+					</p>
 
-				<div class="frage" id="frage3">
-					<div class="inhalt">
-						<h1>Frage 3:</h1>
-						<p>Welche Verkehrsmittel hast du bisher benutzt, um an deinen Urlaubsort zu kommen?</p>
-
-                        <div class="antwort">
-                            <p>Multiple Choice</p>
-                        </div>
-					</div>
-					<div class="steuerung">
-						<button class="back" onclick='scrollToArea("frage2")'>Zurück</button>
-						<button class="ok" onclick='scrollToArea("frage4")'>Weiter</button>
+					<div class="antwort">
+						<p>Multiple Choice</p>
 					</div>
 				</div>
+				<div class="steuerung">
+					<button class="back" onclick="scrollToArea(2)">
+						Zurück
+					</button>
+					<button class="ok" onclick="scrollToArea(4)">Weiter</button>
+				</div>
+			</section>
 
+			<section class="frage" id="section4">
+				<div class="inhalt">
+					<h1>Frage 4:</h1>
+					<p>Wo machst du am liebsten Urlaub?</p>
 
-				<div class="frage" id="frage4">
-					<div class="inhalt">
-						<h1>Frage 4:</h1>
-						<p>Wo machst du am liebsten Urlaub?</p>
-
-                        <div class="antwort">
-                            <p>Single Choice</p>
-                        </div>
-					</div>
-					<div class="steuerung">
-						<button class="back" onclick='scrollToArea("frage3")'>Zurück</button>
-						<button class="ok" onclick='scrollToArea("frage5")'>Weiter</button>
+					<div class="antwort">
+						<p>Single Choice</p>
 					</div>
 				</div>
+				<div class="steuerung">
+					<button class="back" onclick="scrollToArea(3)">
+						Zurück
+					</button>
+					<button class="ok" onclick="scrollToArea(5)">Weiter</button>
+				</div>
+			</section>
 
+			<section class="frage" id="section5">
+				<div class="inhalt">
+					<h1>Frage 5:</h1>
+					<p>In welchem Land hat es dir bisher am besten gefallen?</p>
 
-				<div class="frage" id="frage5">
-					<div class="inhalt">
-						<h1>Frage 5:</h1>
-						<p>In welchem Land hat es dir bisher am besten gefallen?</p>
-
-                        <div class="antwort">
-                            <p>Freitext</p>
-                        </div>
+					<div class="antwort">
+						<p>Freitext</p>
 					</div>
-					<div class="steuerung">
-						<button class="back" onclick='scrollToArea("frage4")'>Zurück</button>
-						<button class="ok" onclick='senden()'>Abschicken</button>
-					</div>
+				</div>
+				<div class="steuerung">
+					<button class="back" onclick='scrollToArea(4)'>
+						Zurück
+					</button>
+					<button class="ok" onclick="senden()">Abschicken</button>
 				</div>
 			</section>
 		</main>
+		<footer>
+			<button class="nav-btn" id="active" onclick="scrollToArea(1)">Frage 1</button>
+			<button class="nav-btn" onclick="scrollToArea(2)">Frage 2</button>
+			<button class="nav-btn" onclick="scrollToArea(3)">Frage 3</button>
+			<button class="nav-btn" onclick="scrollToArea(4)">Frage 4</button>
+			<button class="nav-btn" onclick="scrollToArea(5)">Frage 5</button>
+		</footer>
 
 		<script src="/theme.js"></script>
 		<script type="text/javascript">
 			const fragen = document.getElementById("fragen");
-			function scrollToArea(area) {
-				let target = document.getElementById(area);
+			const navBtns = document.getElementsByClassName("nav-btn");
+
+			function scrollToArea(section) {
+				let target = document.getElementById("section" + section);
 				fragen.scrollLeft = target.offsetLeft - 16; //16 = padding von #fragen
+
+				console.log(navBtns);
+
+				let i = 0;
+				while (i < navBtns.length) {
+					if (i == section - 1) navBtns.item(i).id = "active";
+					else navBtns.item(i).id = "";
+					i++;
+
+				}
+
+
 			}
 
-            function senden() {
-                console.log("Noch nicht implementiert!");
-                
-            }
+			function senden() {
+				console.log("Noch nicht implementiert!");
+			}
 		</script>
 
 		<!-- Skript für Fontawesome Icons -->

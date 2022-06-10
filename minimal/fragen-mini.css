@@ -7,6 +7,8 @@ body {
 	--blue: #3b82f6;
 	--violet: #8b5cf6;
 	--pink: #ec4899;
+
+	--primary: #ec4899;
 	--nav-height: 4rem;
 	--footer-height: 2rem;
 	--site-padding: 1rem;
@@ -85,12 +87,13 @@ header button {
 main {
 	position: absolute;
 	top: var(--nav-height);
+	bottom: var(--footer-height);
 }
 
 #fragen {
 	background-color: transparent;
     padding: var(--site-padding);
-    height: calc(100vh - var(--nav-height) - 2 * var(--site-padding));
+    height: calc(100vh - var(--nav-height) - var(--footer-height));
 	width: 100vw;
     max-width: 100vw;
 	display: grid;
@@ -132,11 +135,35 @@ main {
 }
 
 .frage .steuerung button.ok {
-    background-color: var(--green);
-    border: 2px solid var(--green);
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
 }
 .frage .steuerung button.back {
     background-color: transparent;
-    color: var(--red);
-    border: 2px solid var(--red);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+
+footer {
+	position: absolute;
+	bottom: 0;
+	height: var(--footer-height);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer button {
+	width: 100%;
+	border-radius: 0;
+	border: none;
+	border-top: 2px solid transparent;
+	background-color: var(--card);
+	color: var(--text);
+	transition: 200ms ease;
+}
+footer button#active {
+	border-top: 2px solid var(--primary);
+
 }
