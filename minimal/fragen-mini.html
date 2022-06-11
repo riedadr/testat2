@@ -18,21 +18,41 @@
 			></button>
 		</header>
 		<main id="fragen">
+			<section class="frage" id="section0">
+				<div class="inhalt">
+					<h1>Nutzername:</h1>
+					<p>Wie heißt du?</p>
+
+					<div class="antwort">
+						<input class="w-full" type="text" name="user" id="userInput" />
+					</div>
+				</div>
+				<div class="steuerung">
+					<button
+						class="ok w-full"
+						onclick="scrollToArea(1)"
+					>
+						Starten
+					</button>
+				</div>
+			</section>
+
 			<section class="frage" id="section1">
 				<div class="inhalt">
 					<h1>Frage 1:</h1>
 					<p>Warst du bereits in Italien?</p>
 
 					<div class="antwort">
-						<p>Ja / Nein</p>
 						<label class="switch">
-							<input type="checkbox">
-							<span class="slider round"></span>
-						  </label>
+							<input type="checkbox" id="italienInput" />
+							<span class="slider"></span>
+						</label>
 					</div>
 				</div>
 				<div class="steuerung">
-					<button class="back">Zurück</button>
+					<button class="back" onclick="scrollToArea(0)">
+						Zurück
+					</button>
 					<button class="ok" onclick="scrollToArea(2)">Weiter</button>
 				</div>
 			</section>
@@ -44,12 +64,7 @@
 
 					<div class="antwort">
 						<p>Gib eine Zahl ein</p>
-						<input
-									type="number"
-									id="länder"
-									name="länder"
-									placeholder="z.B. Italien, Österreich oder Spanien"
-								/>
+						<input type="number" id="länderInput" name="länder" />
 					</div>
 				</div>
 				<div class="steuerung">
@@ -68,58 +83,49 @@
 						deinen Urlaubsort zu kommen?
 					</p>
 
-					<div class="antwort">
-						<fieldset>
-							<legend>Wähle einen Ort aus:</legend>
-
+					<div class="antwort" id="verkehrsmittel">
 							<div>
 								<input
 									type="checkbox"
-									id="bus"
-									name="ziele"
-									value="bus"
+									id="Bus"
+									value="Bus"
 								/>
-								<label for="bus">Bus</label>
+								<label for="Bus">🚌 Bus</label>
 							</div>
 
 							<div>
 								<input
 									type="checkbox"
-									id="zug"
-									name="ziele"
-									value="zug"
+									id="Zug"
+									value="Zug"
 								/>
-								<label for="zug">Zug</label>
+								<label for="Zug">🚂 Zug</label>
 							</div>
 
 							<div>
 								<input
 									type="checkbox"
-									id="flugzeug"
-									name="ziele"
-									value="flugzeug"
+									id="Flugzeug"
+									value="Flugzeug"
 								/>
-								<label for="flugzeug">Berge</label>
+								<label for="Flugzeug">✈️ Flugzeug</label>
 							</div>
 							<div>
 								<input
 									type="checkbox"
-									id="land"
-									name="ziele"
-									value="land"
+									id="Auto"
+									value="Auto"
 								/>
-								<label for="land">Land</label>
+								<label for="Auto">🚗 Auto</label>
 							</div>
 							<div>
 								<input
 									type="checkbox"
-									id="stadt"
-									name="ziele"
-									value="stadt"
+									id="Schiff"
+									value="Schiff"
 								/>
-								<label for="stadt">Stadt</label>
+								<label for="Schiff">🛥️ Schiff</label>
 							</div>
-						</fieldset>
 					</div>
 				</div>
 				<div class="steuerung">
@@ -135,58 +141,55 @@
 					<h1>Frage 4:</h1>
 					<p>Wo machst du am liebsten Urlaub?</p>
 
-					<div class="antwort">
-						<fieldset>
-							<legend>Wähle einen Ort aus:</legend>
+					<div class="antwort" id="lieblingsziele">
 
 							<div>
 								<input
 									type="radio"
-									id="see"
+									id="See"
 									name="ziele"
-									value="see"
+									value="See"
 								/>
-								<label for="see">See</label>
-							</div>
-
-							<div>
-								<input
-									type="radio"
-									id="meer"
-									name="ziele"
-									value="meer"
-								/>
-								<label for="meer">Meer</label>
+								<label for="See">🏞️ See</label>
 							</div>
 
 							<div>
 								<input
 									type="radio"
-									id="flugzeug"
+									id="Meer"
 									name="ziele"
-									value="flugzeug"
+									value="Meer"
 								/>
-								<label for="flugzeug">Flugzeug</label>
+								<label for="Meer">🏖️ Meer</label>
+							</div>
+
+							<div>
+								<input
+									type="radio"
+									id="Berge"
+									name="ziele"
+									value="Berge"
+								/>
+								<label for="Berge">🏔️ Berge</label>
 							</div>
 							<div>
 								<input
 									type="radio"
-									id="auto"
+									id="Land"
 									name="ziele"
-									value="auto"
+									value="Land"
 								/>
-								<label for="auto">Auto</label>
+								<label for="Land">🏘️ Land</label>
 							</div>
 							<div>
 								<input
 									type="radio"
-									id="boot"
+									id="Stadt"
 									name="ziele"
-									value="boot"
+									value="Stadt"
 								/>
-								<label for="boot">Boot/Schiff</label>
+								<label for="Stadt">🏙️ Stadt</label>
 							</div>
-						</fieldset>
 					</div>
 				</div>
 
@@ -204,13 +207,12 @@
 					<p>In welchem Land hat es dir bisher am besten gefallen?</p>
 
 					<div class="antwort">
-						<p>Gib ein Land ein</p>
 						<input
-									type="text"
-									id="bestesLand"
-									name="bestesLand"
-									placeholder="z.B. Italien, Österreich oder Spanien"
-								/>
+							type="text"
+							id="lieblingsland"
+							class="w-full"
+							placeholder="z.B. Italien, Österreich oder Spanien"
+						/>
 					</div>
 				</div>
 				<div class="steuerung">
@@ -222,9 +224,10 @@
 			</section>
 		</main>
 		<footer>
-			<button class="nav-btn" id="active" onclick="scrollToArea(1)">
-				Frage 1
+			<button class="nav-btn" id="active" onclick="scrollToArea(0)">
+				Name
 			</button>
+			<button class="nav-btn" onclick="scrollToArea(1)">Frage 1</button>
 			<button class="nav-btn" onclick="scrollToArea(2)">Frage 2</button>
 			<button class="nav-btn" onclick="scrollToArea(3)">Frage 3</button>
 			<button class="nav-btn" onclick="scrollToArea(4)">Frage 4</button>
@@ -239,20 +242,51 @@
 			function scrollToArea(section) {
 				let target = document.getElementById("section" + section);
 				fragen.scrollLeft = target.offsetLeft - 16; //16 = padding von #fragen
-
-				console.log(navBtns);
-
 				let i = 0;
 				while (i < navBtns.length) {
-					if (i == section - 1) navBtns.item(i).id = "active";
+					if (i == section) navBtns.item(i).id = "active";
 					else navBtns.item(i).id = "";
 					i++;
 				}
 			}
 
 			function senden() {
-				console.log("Noch nicht implementiert!");
+				let user = document.getElementById("userInput").value;
+				let frage1 = document.getElementById("italienInput").checked;
+				let frage2 = document.getElementById("länderInput").value;
+				let frage3 = getAntwort3();
+				let frage4 = getAntwort4();
+				let frage5 = document.getElementById("lieblingsland").value;
+
+				console.log("🧑‍💻?", user);
+				console.log("🍕?", frage1);
+				console.log("🌍?", frage2);
+				console.log("✈️?", frage3);
+				console.log("📍?", frage4);
+				console.log("❤️?", frage5);
+
+				
 			}
+
+			const getAntwort3 = () => {
+				let vehiclesField = document.getElementById("verkehrsmittel");
+				let vehicles = vehiclesField.querySelectorAll("input");
+
+				let selectedVehicles = [];
+				vehicles.forEach((vehicle) => {
+					if (vehicle.checked) selectedVehicles.push(vehicle.value);
+				});
+
+				return selectedVehicles;
+			};
+
+			const getAntwort4 = () => {
+				let placesField = document.getElementById("lieblingsziele");
+				let favPlace = placesField.querySelector('input[name="ziele"]:checked').value;
+
+				return favPlace;
+			};
+
 		</script>
 
 		<!-- Skript für Fontawesome Icons -->

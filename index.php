@@ -95,7 +95,7 @@
 					$fr2_sum = 0;
 					$fr2_max = 0;
 
-					$fr3_bus = $fr3_zug = $fr3_flugzeug = $fr3_auto = $fr3_boot = 0;
+					$fr3_bus = $fr3_zug = $fr3_flugzeug = $fr3_auto = $fr3_schiff = 0;
 
 					$fr4_see = $fr4_meer = $fr4_berge = $fr4_stadt = $fr4_land = 0;
 
@@ -117,7 +117,7 @@
 							if (in_array("Zug", $verkehrsmittel)) $fr3_zug++;
 							if (in_array("Flugzeug", $verkehrsmittel)) $fr3_flugzeug++;
 							if (in_array("Auto", $verkehrsmittel)) $fr3_auto++;
-							if (in_array("Boot", $verkehrsmittel)) $fr3_boot++;
+							if (in_array("Schiff", $verkehrsmittel)) $fr3_schiff++;
 
 							switch ($row["frage4"]) {
 								case "See":
@@ -214,8 +214,8 @@
 								<td><?= $fr3_auto ?></td>
 							</tr>
 							<tr>
-								<td>Boot/Schiff</td>
-								<td><?= $fr3_boot ?></td>
+								<td>Schiff</td>
+								<td><?= $fr3_schiff ?></td>
 							</tr>
 						</table>
 					</div>
