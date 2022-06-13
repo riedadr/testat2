@@ -207,7 +207,7 @@
 					<button type="button" class="back" onclick="scrollToArea(3)">
 						Zurück
 					</button>
-					<button class="ok" onclick="scrollToArea(5)">Weiter</button>
+					<button type="button" class="ok" onclick="scrollToArea(5)">Weiter</button>
 				</div>
 			</section>
 
@@ -232,7 +232,7 @@
 						Zurück
 					</button>
 				
-					<button type="button" class="ok" onclick="senden()">Abschicken</button>
+					<button class="ok" onclick="senden()">Abschicken</button>
 				</div>
 			</section>
 
