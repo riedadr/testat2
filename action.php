@@ -1,8 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="fragen-mini.css" />
+		<title>Umfrage</title>
+	</head>
+
+	<body>
+
+
 <?php 
 //Ziehe alle Werte, sofern nichts eingegeben/angetickt trage 0 bzw. NULL ein
 //(P) Check nochmal wo bzw. wann Null besser geeignet ist.
 //(P2) Abfragen ggf. anfaellig für sql-injection und Sicherheit der db tendiert gegen 0
-$user = $_POST ['user'];
+$user = (isset($_POST['user']) ? $_POST['user'] : 'Bernd');
 $frage1 = (isset($_POST['frageitalien']) ? $_POST['frageitalien'] : 0);
 $frage2 = (isset($_POST['länder']) ? $_POST['länder'] : 0);
 
@@ -49,4 +62,6 @@ $dbconn->close();
 }
             ?>
 
+</body>
+</html>
   

@@ -33,7 +33,7 @@
 					<button
 						type="button"
 						class="ok w-full"
-						onclick="scrollToArea(1)"
+						onclick="NoName();"
 					>
 						Starten
 					</button>
@@ -321,6 +321,14 @@
 				return favPlace;
 			};
 
+			function NoName() {
+				let user = document.getElementById("userInput").value;
+				if (user === "") {
+    				alert("Bitte geben Sie ihren Namen ein");
+    				}
+				else
+  					scrollToArea(1);
+			}
 		</script>
 
 		<!-- Skript für Fontawesome Icons -->
