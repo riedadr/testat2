@@ -7,10 +7,10 @@ $frage1 = (isset($_POST['frageitalien']) ? $_POST['frageitalien'] : 0);
 $frage2 = (isset($_POST['länder']) ? $_POST['länder'] : 0);
 
 $frage3bus = (isset($_POST['Bus']) ? $_POST['Bus'] : NULL);
-$frage3zug = (isset($_POST['Zug']) ? $_POST['Zug'] : NULL);
-$frage3flugzeug = (isset($_POST['Flugzeug']) ? $_POST['Flugzeug'] : NULL);
-$frage3auto = (isset($_POST['Auto']) ? $_POST['Auto'] : NULL);
-$frage3schiff = (isset($_POST['Schiff']) ? $_POST['Schiff'] : NULL);
+$frage3zug = (isset($_POST[',Zug']) ? $_POST['Zug'] : NULL);
+$frage3flugzeug = (isset($_POST[',Flugzeug']) ? $_POST['Flugzeug'] : NULL);
+$frage3auto = (isset($_POST[',Auto']) ? $_POST['Auto'] : NULL);
+$frage3schiff = (isset($_POST[',Schiff']) ? $_POST['Schiff'] : NULL);
 
 $frage4 = (isset($_POST['ziele']) ? $_POST['ziele'] : 0);
 $frage5 = (isset($_POST['lieblingsland']) ? $_POST['lieblingsland'] : NULL);
@@ -35,7 +35,7 @@ if(mysqli_num_rows($ergebnis) >=1)
 //Führe Eintragung in DB durch und prüfe ob erfolgreich  
 $db = "
 INSERT INTO `urlaub-table` (user,frage1,frage2,frage3,frage4,frage5) 
-VALUES('{$user}','{$frage1}','{$frage2}','$frage3bus,$frage3zug,$frage3flugzeug,$frage3auto,$frage3schiff','{$frage4}','{$frage5}')
+VALUES('{$user}','{$frage1}','{$frage2}','$frage3bus $frage3zug $frage3flugzeug $frage3auto $frage3schiff','{$frage4}','{$frage5}')
 ";
 
 if ($dbconn->query($db) === TRUE) {
