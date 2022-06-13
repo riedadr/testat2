@@ -13,8 +13,6 @@ if ($json != null) {
     $fr4 = $data->fr4;
     $fr5 = $data->fr5;
 
-    
-
     $servername = "sql.t2.cit116.xyz";
     $username = "dev-urlaub";
     $password = "webdev2022";
@@ -253,10 +251,8 @@ if ($json != null) {
                 fr4: frage4,
                 fr5: frage5
             }
-            console.log("data", data);
 
             let string = JSON.stringify(data);
-            console.log("string", string);
 
             const request = new XMLHttpRequest();
             request.open("POST", "<?= $_SERVER['PHP_SELF'] ?>");
