@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="dashboard.css" />
+	<link rel="stylesheet" href="/styles/dashboard.css" />
 	<title>Umfrage</title>
 </head>
 
@@ -294,7 +294,7 @@
 			<button id="db" onclick="toggleDB()">
 				<i class="fa-solid fa-database"></i> DB
 			</button>
-			<a href="fragen_mini.php">
+			<a href="/fragen.php">
 				an Umfrage teilnehmen
 				<i class="fa-solid fa-play"></i>
 			</a>
@@ -303,7 +303,7 @@
 			</button>
 		</footer>
 	</section>
-	<section id="info"  style="display: none;">
+	<section id="info" style="display: none;">
 		<div class="modal">
 			<div class="flex-between">
 				<h1>Informationen</h1>
@@ -316,11 +316,11 @@
 			<ul>
 				<li>Icons von <a href="https://fontawesome.com/" target="_blank" rel="noreferrer">Fontawesome</a></li>
 				<li>Hintergrund von <a href="https://codepen.io/pehaa/pen/yLVeLNg" target="_blank" rel="noreferrer">codepen.io</a>; übernommen wurden Sonne, Wolken und Pflanzen. Himmel und Meer würden für dark/light Mode überarbeitet.</li>
-			
-			
+
+
 			</ul>
 
-			<a id="start-btn" href="fragen_mini.php">
+			<a id="start-btn" href="/fragen.php">
 				an Umfrage teilnehmen
 				<i class="fa-solid fa-play"></i>
 			</a>
