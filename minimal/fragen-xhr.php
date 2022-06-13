@@ -2,53 +2,33 @@
 $input = fopen("php://input", "r");
 $json = fgets($input);
 
-if ($json != null || true) {
+if ($json != null) {
 
-    /*
     $data = json_decode($json);
-    print_r($data);
     
     $user = $data->user;
     $fr1 = $data->fr1;
     $fr2 = $data->fr2;
     $fr3 = str_replace("|", ",", $data->fr3);
-
     $fr4 = $data->fr4;
     $fr5 = $data->fr5;
 
-    */
-    echo "heo";
-
-    $user = "SQL-Test";
-    $fr1 = 0;
-    $fr2 = 32;
-    $fr3 = "Auto";
-    $fr4 = "See";
-    $fr5 = "Schweiz";
+    
 
     $servername = "sql.t2.cit116.xyz";
     $username = "dev-urlaub";
     $password = "webdev2022";
     $dbname = "dev-urlaub";
 
-    $db = new mysqli($servername, $username, $password, $dbname);
+    $db = mysqli_connect($servername, $username, $password, $dbname);
     if (!$db) {
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "INSERT INTO `urlaub-table` (`id`, `user`, `frage1`, `frage2`, `frage3`, `frage4`, `frage5`) VALUES (NULL, $user, $fr1, $fr2, $fr3, $fr4, $fr5);";
-    //mysqli_query($db, $sql);
+    $sql = "INSERT INTO `urlaub-table` (`id`, `user`, `frage1`, `frage2`, `frage3`, `frage4`, `frage5`) VALUES (NULL, '$user', '$fr1', '$fr2', '$fr3', '$fr4', '$fr5');";
+    $result = mysqli_query($db, $sql);
 
-    try {
-        if ($db->query($sql) === TRUE) {
-            echo "Eintrag erstellt";
-        } else {
-            echo "Error: " . $sql . "<br>" . $db->error;
-        }
-    } catch (Error $e) {
-        echo 'Ein Fehler ist aufgetreten' . '<br>';
-        echo $e->getMessage();
-    }
+    mysqli_close($db);
 }
 
 
