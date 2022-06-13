@@ -294,7 +294,7 @@
 			<button id="db" onclick="toggleDB()">
 				<i class="fa-solid fa-database"></i> DB
 			</button>
-			<a href="#noch_nicht_verfügbar">
+			<a href="fragen_mini.php">
 				an Umfrage teilnehmen
 				<i class="fa-solid fa-play"></i>
 			</a>
@@ -320,7 +320,7 @@
 			
 			</ul>
 
-			<a id="start-btn" href="#noch_nicht_verfügbar">
+			<a id="start-btn" href="fragen_mini.php">
 				an Umfrage teilnehmen
 				<i class="fa-solid fa-play"></i>
 			</a>
