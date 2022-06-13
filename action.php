@@ -22,7 +22,7 @@ print_r ($dbconn->connect_error); //Prüfe DB Verbindung
     die('Zugriff auf Datenbank nicht moeglich');
 }
 
-$checkuser= "SELECT user FROM urlaub WHERE user='{$user}' ";
+$checkuser= "SELECT 'user' FROM `urlaub-table` WHERE user = '{$user}' ";
 $ergebnis = mysqli_query($dbconn, $checkuser);
 
 if(mysqli_num_rows($ergebnis) >=1)
@@ -34,7 +34,7 @@ if(mysqli_num_rows($ergebnis) >=1)
  else {
 //Führe Eintragung in DB durch und prüfe ob erfolgreich  
 $db = "
-INSERT INTO urlaub-table (user,frage1,frage2,frage3,frage4,frage5) 
+INSERT INTO `urlaub-table` (user,frage1,frage2,frage3,frage4,frage5) 
 VALUES('{$user}','{$frage1}','{$frage2}','$frage3bus,$frage3zug,$frage3flugzeug,$frage3auto,$frage3schiff','{$frage4}','{$frage5}')
 ";
 
