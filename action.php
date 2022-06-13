@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="de">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="fragen-mini.css" />
-		<title>Umfrage</title>
-	</head>
-
-	<body>
-
-
 <?php 
 //Ziehe alle Werte, sofern nichts eingegeben/angetickt trage 0 bzw. NULL ein
 //(P) Check nochmal wo bzw. wann Null besser geeignet ist.
@@ -61,7 +48,3 @@ if ($dbconn->query($db) === TRUE) {
 $dbconn->close();
 }
             ?>
-
-</body>
-</html>
-  
