@@ -177,11 +177,10 @@
 						besucht?
 					</p>
 					<div class="result">
-						<div class="flex-between">
-							<p>min: <span class="bold blue"><?= $fr2_min ?></span></p>
-							<p>avg: <span class="bold green"><?= number_format($fr2_sum / $count, 0) ?></span></p>
-							<p>max: <span class="bold orange"><?= $fr2_max ?></span></p>
-						</div>
+						<p>Jeder Teilnehmer hat mindestens <span class="bold blue"><?= $fr2_min ?></span> und durchschnittlich
+							<span class="bold green"><?= number_format($fr2_sum / $count, 0) ?></span> Länder besucht.
+						</p>
+						<p>Die Maximalanzahl besuchter Länder beträgt <span class="bold orange"><?= $fr2_max ?></span>.</p>
 					</div>
 				</li>
 
@@ -311,11 +310,14 @@
 					<i class="fa-solid fa-xmark"></i>
 				</button>
 			</div>
-			<p>Diese Umfrage wurde im Rahmen der zweiten Testats für Web-Development 1 von Adrian Riedel und Christopher Förster erstellt.</p>
+			<p>Diese Umfrage wurde im Rahmen der zweiten Testats für Web-Development 1 von Adrian Riedel und Christopher Förster erstellt.
+				Unter <a href="https://t2.cit116.xyz" target="_blank" rel="noopener noreferrer">t2.cit116.xyz</a> ist eine funktionierende Onlineversion verfügbar.
+			</p>
 			<h2>Hinweise</h2>
+			<p>Um mögliche Anzeigefehler zu verhindern, deaktivieren sie bitte den Dark Reader, falls sie diese Erweiterung nutzen.</p>
 			<ul>
 				<li>Icons von <a href="https://fontawesome.com/" target="_blank" rel="noreferrer">Fontawesome</a></li>
-				<li>Hintergrund von <a href="https://codepen.io/pehaa/pen/yLVeLNg" target="_blank" rel="noreferrer">codepen.io</a>; übernommen wurden Sonne, Wolken und Pflanzen. Himmel und Meer würden für dark/light Mode überarbeitet.</li>
+				<li>Hintergrund von <a href="https://codepen.io/pehaa/pen/yLVeLNg" target="_blank" rel="noreferrer">codepen.io</a>; übernommen wurden Sonne, Wolken und Pflanzen. Himmel und Meer wurden für dark/light Mode überarbeitet.</li>
 
 
 			</ul>

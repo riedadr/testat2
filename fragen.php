@@ -23,7 +23,7 @@
 					<p>Wie heißt du?</p>
 
 					<div class="antwort">
-						<input class="w-full" type="text" name="user" id="userInput" />
+						<input class="w-full" type="text" name="user" id="userInput" placeholder="optional"/>
 					</div>
 				</div>
 				<div class="steuerung">
@@ -167,7 +167,7 @@
 						Zurück
 					</button>
 
-					<button class="ok" onclick="senden()">Abschicken</button>
+					<button class="ok">Abschicken</button>
 				</div>
 			</section>
 
@@ -214,49 +214,6 @@
 				i++;
 			}
 		}
-
-		function senden() {
-			let user = document.getElementById("userInput").value;
-			let frage1 = document.getElementById("italienInput").checked;
-			let frage2 = document.getElementById("länderInput").value;
-			let frage3 = getAntwort3();
-			let frage4 = getAntwort4();
-			let frage5 = document.getElementById("lieblingsland").value;
-
-			console.log("🧑‍💻?", user);
-			console.log("🍕?", frage1);
-			console.log("🌍?", frage2);
-			console.log("✈️?", frage3);
-			console.log("📍?", frage4);
-			console.log("❤️?", frage5);
-
-			/*		$.ajax({
-            type: 'post',
-            url: 'action.php',
-			data : { user , frage1, frage2, frage3, frage4, frage5 }
-						}); */
-		}
-
-
-
-		const getAntwort3 = () => {
-			let vehiclesField = document.getElementById("verkehrsmittel");
-			let vehicles = vehiclesField.querySelectorAll("input");
-
-			let selectedVehicles = [];
-			vehicles.forEach((vehicle) => {
-				if (vehicle.checked) selectedVehicles.push(vehicle.value);
-			});
-
-			return selectedVehicles;
-		};
-
-		const getAntwort4 = () => {
-			let placesField = document.getElementById("lieblingsziele");
-			let favPlace = placesField.querySelector('input[name="ziele"]:checked').value;
-
-			return favPlace;
-		};
 
 		function NoName() {
 			let user = document.getElementById("userInput").value;
