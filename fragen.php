@@ -40,7 +40,7 @@
 
 					<div class="antwort">
 						<label class="switch">
-							<input type="checkbox" value="0" name="frageitalien" id="italienInput" />
+							<input type="checkbox" name="frageitalien" id="italienInput" />
 							<span class="slider"></span>
 						</label>
 					</div>

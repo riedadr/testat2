@@ -18,7 +18,7 @@
     //(P) Check nochmal wo bzw. wann Null besser geeignet ist.
     //(P2) Abfragen ggf. anfaellig für sql-injection und Sicherheit der db tendiert gegen 0
     $user = (isset($_POST['user']) && strlen($_POST['user']) > 0 ? $_POST['user'] : 'Anon'.time());
-    $frage1 = (isset($_POST['frageitalien']) ? $_POST['frageitalien'] : 0);
+    $frage1 = (isset($_POST['frageitalien']) ? 1 : 0);
     $frage2 = (isset($_POST['länder']) && $_POST['länder'] >= 1  ? $_POST['länder'] : 1);
 
     $frage3array = array();
