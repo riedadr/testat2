@@ -105,9 +105,12 @@ main#fragen {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .frage .inhalt {
+	width: 100%;
+	max-width: 600px;
 	padding: var(--site-padding);
 	background-color: var(--card);
 	box-shadow: 0px 2px 10px 0px var(--shadow);
@@ -119,6 +122,8 @@ main#fragen {
 }
 
 .steuerung {
+	width: 100%;
+	max-width: 600px;
 	margin-top: 2rem;
 	display: flex;
 	gap: 2rem;
