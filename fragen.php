@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="icon" href="favicon.gif" type="image/gif" >
+	<link rel="icon" href="favicon.gif" type="image/gif">
 	<link rel="stylesheet" href="/styles/fragen.css" />
 	<title>Umfrage</title>
 </head>
@@ -24,7 +24,7 @@
 					<p>Wie heißt du?</p>
 
 					<div class="antwort">
-						<input class="w-full" type="text" name="user" id="userInput" placeholder="optional"/>
+						<input class="w-full" type="text" name="user" id="userInput" />
 					</div>
 				</div>
 				<div class="steuerung">
