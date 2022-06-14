@@ -3,7 +3,7 @@ Eine funktionierende Version der Umfrage ist unter <a href="https://t2.cit116.xy
 Die Zertifikatswarnung bitte akzeptieren.
 
 # Anmerkungen
-Im Ordner "alt" befindet sich noch die ursprüngliche HTML-Datei der Fragen sowie eine funktionierende (aber nicht weiter verwendete) Variante mit XMLHttpRequest um die Informationen in die Datenbank zu schreiben.
+Im Ordner "xhr" befindet sich noch eine funktionierende (aber nicht weiter verwendete) Variante mit XMLHttpRequest um die Informationen in die Datenbank zu schreiben.
 
 Das Repository nutzt die gleiche Datenbank wie die o.a. Website.
 Soll die im Repository vorhandene Kopie der Datenbank in einer lokalen Umgebung genutzt werden, so ist in zwei Dateien die Adresse auf localhost zu ändern:
