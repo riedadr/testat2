@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="icon" href="favicon.gif" type="image/gif" >
+	<link rel="icon" href="walking-duck.gif" type="image/gif" >
 	<link rel="stylesheet" href="/styles/dashboard.css" />
 	<title>Umfrage</title>
 </head>
@@ -294,7 +294,7 @@
 			<button id="db" onclick="toggleDB()">
 				<i class="fa-solid fa-database"></i> DB
 			</button>
-			<a href="/fragen.php">
+			<a href="/fragen.html">
 				An Umfrage teilnehmen
 				<i class="fa-solid fa-play"></i>
 			</a>
@@ -312,18 +312,20 @@
 				</button>
 			</div>
 			<p>Diese Umfrage wurde im Rahmen des zweiten Testats für Web-Development 1 von Adrian Riedel und Christopher Förster erstellt.
-				Unter <a href="https://t2.cit116.xyz" target="_blank" rel="noopener noreferrer">t2.cit116.xyz</a> ist eine funktionierende Onlineversion verfügbar.
+				Unter <a href="https://t2.cit116.xyz" target="_blank" rel="noopener noreferrer">t2.cit116.xyz</a> ist eine funktionierende Onlineversion aufrufbar.
+				Die Dateien dieser Umfrage sind ebenfalls auf <a href="https://github.com/riedadr/testat2" target="_blank" rel="noopener noreferrer">GitHub</a> verfügbar.
 			</p>
 			<h2>Hinweise</h2>
-			<p>Um mögliche Anzeigefehler zu vermeiden, deaktivieren Sie bitte den Dark Reader, falls Sie diese Erweiterung nutzen.</p>
+			<p>Um mögliche Anzeigefehler zu vermeiden, deaktivieren Sie bitte den Dark Reader für diese Seite, falls Sie diese Erweiterung nutzen.</p>
 			<ul>
-				<li>Icons von <a href="https://fontawesome.com/" target="_blank" rel="noreferrer">Fontawesome</a></li>
-				<li>Hintergrund von <a href="https://codepen.io/pehaa/pen/yLVeLNg" target="_blank" rel="noreferrer">codepen.io</a>; übernommen wurden Sonne, Wolken und Pflanzen. Himmel und Meer wurden für dark/light Mode überarbeitet.</li>
+				<li>Icons von <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">Fontawesome</a></li>
+				<li>Favicon von <a href="https://tenor.com/view/pato-juan-gif-23189651" target="_blank" rel="noopener noreferrer">tenor</a></li>
+				<li>Hintergrund von <a href="https://codepen.io/pehaa/pen/yLVeLNg" target="_blank" rel="noopener noreferrer">codepen.io</a>; übernommen wurden Sonne, Wolken und Pflanzen. Himmel und Meer wurden für dark/light Mode überarbeitet.</li>
 
 
 			</ul>
 
-			<a id="start-btn" href="/fragen.php">
+			<a id="start-btn" href="/fragen.html">
 				An Umfrage teilnehmen
 				<i class="fa-solid fa-play"></i>
 			</a>

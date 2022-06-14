@@ -1,7 +1,8 @@
 //get theme from localStorage or set default Theme
 const body = document.querySelector("body");
+const themeBtn = document.getElementById("themeBtn");
 body.className = localStorage.theme ? localStorage.theme : "light";
-styleBtn();
+if (themeBtn) styleBtn();
 
 function switchTheme() {
 	let newTheme = body.className === "dark" ? "light" : "dark";
@@ -9,11 +10,10 @@ function switchTheme() {
 	localStorage.theme = newTheme;
 	body.className = newTheme;
 
-	styleBtn();
+	if (themeBtn) styleBtn();
 }
 
 function styleBtn() {
-	const themeBtn = document.getElementById("themeBtn");
 	let theme = localStorage.theme;
 
 	if (theme === "dark") {

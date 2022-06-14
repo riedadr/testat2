@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="walking-duck.gif" type="image/gif" />
   <link rel="stylesheet" href="/styles/fragen.css">
   <title>Document</title>
 </head>
@@ -17,7 +18,7 @@
     //Ziehe alle Werte, sofern nichts eingegeben/angetickt trage 0 bzw. NULL ein
     //(P) Check nochmal wo bzw. wann Null besser geeignet ist.
     //(P2) Abfragen ggf. anfaellig für sql-injection und Sicherheit der db tendiert gegen 0
-    $user = (isset($_POST['user']) && strlen($_POST['user']) > 0 ? $_POST['user'] : 'Anon'.time());
+    $user = (isset($_POST['user']) && strlen($_POST['user']) > 0 ? $_POST['user'] : 'Anon' . time());
     $frage1 = (isset($_POST['frageitalien']) ? 1 : 0);
     $frage2 = (isset($_POST['länder']) && $_POST['länder'] >= 1  ? $_POST['länder'] : 1);
 
@@ -43,7 +44,7 @@
     $ergebnis = mysqli_query($dbconn, $checkuser);
 
     if (mysqli_num_rows($ergebnis) >= 1) {
-      header( "refresh:5;url=fragen.php" );
+      header("refresh:5;url=fragen.html");
       echo "Sie haben bereits abgestimmt!";
     } else {
       //Führe Eintragung in DB durch und prüfe ob erfolgreich  
@@ -59,32 +60,33 @@
       $dbconn->close();
     }
     ?>
+
     <p>Sie werden in <span id="timer">5</span> Sekunden weitergeleitet.</p>
     <div class="steuerung">
-					<a href="/fragen.php" class="back">
-						Zurück
-					</a>
-					<a href="/index.php" class="ok">Übersicht</a>
-				</div>
+      <a href="/fragen.html" class="back">
+        Zurück
+      </a>
+      <a href="/index.php" class="ok">Übersicht</a>
     </div>
+  </div>
 
-    <script type="text/javascript">
-      let timer = document.getElementById("timer");
-      let seconds = 5;
+  <script type="text/javascript">
+    let timer = document.getElementById("timer");
+    let seconds = 5;
 
-      setInterval(() => {
-        countDown();
-      }, 1000);
-      
-      function countDown() {
-        seconds--;
-        //falback bei PHP-Fehler
-        if (seconds <= -1) window.location.href = "/";
-        timer.innerText  = seconds;
+    setInterval(() => {
+      countDown();
+    }, 1000);
 
-      }
-    </script>
-    <script src="/theme.js"></script>
+    function countDown() {
+      seconds--;
+      //falback bei PHP-Fehler
+      if (seconds <= -1) window.location.href = "/";
+      timer.innerText = seconds;
+
+    }
+  </script>
+  <script src="/theme.js"></script>
 
 </body>
 
