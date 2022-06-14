@@ -161,7 +161,7 @@
 			<ul id="dashboard">
 				<li id="fr1">
 					<h2>Frage 1:</h2>
-					<p>Warst du bereits in Italien?</p>
+					<p>Warst Du bereits in Italien?</p>
 					<div class="result">
 						<div class="flex-between">
 							<p>Ja: <span class="bold green"><?= $fr1_italien ?></span></p>
@@ -174,7 +174,7 @@
 				<li id="fr2">
 					<h2>Frage 2:</h2>
 					<p>
-						Wie viele verschieden Länder hast du bereits
+						Wie viele verschiedene Länder hast Du bereits
 						besucht?
 					</p>
 					<div class="result">
@@ -188,7 +188,7 @@
 				<li id="fr3">
 					<h2>Frage 3:</h2>
 					<p>
-						Welche Verkehrsmittel hast du bisher benutzt, um an
+						Welche Verkehrsmittel hast Du bisher benutzt, um an
 						deinen Urlaubsort zu kommen?
 					</p>
 					<div class="result">
@@ -223,7 +223,7 @@
 
 				<li id="fr4">
 					<h2>Frage 4:</h2>
-					<p>Wo machst du am liebsten Urlaub?</p>
+					<p>Wo machst Du am liebsten Urlaub?</p>
 					<div class="result flex-between">
 						<table class="width-full">
 							<tr>
@@ -276,7 +276,7 @@
 
 				<li id="fr5">
 					<h2>Frage 5:</h2>
-					<p>In welchem Land hat es dir bisher am besten gefallen?</p>
+					<p>In welchem Land hat es Dir bisher am besten gefallen?</p>
 					<div class="result">
 						<ul>
 							<?php
@@ -295,7 +295,7 @@
 				<i class="fa-solid fa-database"></i> DB
 			</button>
 			<a href="/fragen.php">
-				an Umfrage teilnehmen
+				An Umfrage teilnehmen
 				<i class="fa-solid fa-play"></i>
 			</a>
 			<button onclick="toggleInfo()">
@@ -324,7 +324,7 @@
 			</ul>
 
 			<a id="start-btn" href="/fragen.php">
-				an Umfrage teilnehmen
+				An Umfrage teilnehmen
 				<i class="fa-solid fa-play"></i>
 			</a>
 		</div>
