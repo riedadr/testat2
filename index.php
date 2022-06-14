@@ -311,11 +311,11 @@
 					<i class="fa-solid fa-xmark"></i>
 				</button>
 			</div>
-			<p>Diese Umfrage wurde im Rahmen der zweiten Testats für Web-Development 1 von Adrian Riedel und Christopher Förster erstellt.
+			<p>Diese Umfrage wurde im Rahmen des zweiten Testats für Web-Development 1 von Adrian Riedel und Christopher Förster erstellt.
 				Unter <a href="https://t2.cit116.xyz" target="_blank" rel="noopener noreferrer">t2.cit116.xyz</a> ist eine funktionierende Onlineversion verfügbar.
 			</p>
 			<h2>Hinweise</h2>
-			<p>Um mögliche Anzeigefehler zu verhindern, deaktivieren sie bitte den Dark Reader, falls sie diese Erweiterung nutzen.</p>
+			<p>Um mögliche Anzeigefehler zu vermeiden, deaktivieren Sie bitte den Dark Reader, falls Sie diese Erweiterung nutzen.</p>
 			<ul>
 				<li>Icons von <a href="https://fontawesome.com/" target="_blank" rel="noreferrer">Fontawesome</a></li>
 				<li>Hintergrund von <a href="https://codepen.io/pehaa/pen/yLVeLNg" target="_blank" rel="noreferrer">codepen.io</a>; übernommen wurden Sonne, Wolken und Pflanzen. Himmel und Meer wurden für dark/light Mode überarbeitet.</li>
