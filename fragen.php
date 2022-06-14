@@ -21,7 +21,7 @@
 			<section class="frage" id="section0">
 				<div class="inhalt">
 					<h1>Nutzername:</h1>
-					<p>Wie heißt du?</p>
+					<p>Wie heißt Du?</p>
 
 					<div class="antwort">
 						<input class="w-full" type="text" name="user" id="userInput" />
@@ -37,7 +37,7 @@
 			<section class="frage" id="section1">
 				<div class="inhalt">
 					<h1>Frage 1:</h1>
-					<p>Warst du bereits in Italien?</p>
+					<p>Warst Du bereits in Italien?</p>
 
 					<div class="antwort">
 						<label class="switch">
@@ -57,7 +57,7 @@
 			<section class="frage" id="section2">
 				<div class="inhalt">
 					<h1>Frage 2:</h1>
-					<p>Wie viele verschieden Länder hast du bereits besucht?</p>
+					<p>Wie viele verschiedene Länder hast Du bereits besucht?</p>
 
 					<div class="antwort">
 						<p>Gib eine Zahl ein</p>
@@ -76,7 +76,7 @@
 				<div class="inhalt">
 					<h1>Frage 3:</h1>
 					<p>
-						Welche Verkehrsmittel hast du bisher benutzt, um an
+						Welche Verkehrsmittel hast Du bisher benutzt, um an
 						deinen Urlaubsort zu kommen?
 					</p>
 
@@ -116,7 +116,7 @@
 			<section class="frage" id="section4">
 				<div class="inhalt">
 					<h1>Frage 4:</h1>
-					<p>Wo machst du am liebsten Urlaub?</p>
+					<p>Wo machst Du am liebsten Urlaub?</p>
 
 					<div class="antwort" id="lieblingsziele">
 
@@ -156,7 +156,7 @@
 			<section class="frage" id="section5">
 				<div class="inhalt">
 					<h1>Frage 5:</h1>
-					<p>In welchem Land hat es dir bisher am besten gefallen?</p>
+					<p>In welchem Land hat es Dir bisher am besten gefallen?</p>
 
 					<div class="antwort">
 						<input type="text" id="lieblingsland" name="lieblingsland" class="w-full" placeholder="z.B. Italien, Österreich oder Spanien" />
