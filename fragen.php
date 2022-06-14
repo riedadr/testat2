@@ -12,8 +12,6 @@
 
 <body>
 
-<?php
-?>
 	<header>
 		<h1>Fragen</h1>
 		<button id="themeBtn" title="switch theme" onclick="switchTheme()"></button>
@@ -187,7 +185,8 @@
 		<button type="button" class="nav-btn" onclick="scrollToArea(5)">Frage 5</button>
 	</footer>
 
-
+<?php
+?>
 
 	<script src="/theme.js"></script>
 
