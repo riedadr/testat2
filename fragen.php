@@ -12,6 +12,8 @@
 
 <body>
 
+<?php
+?>
 	<header>
 		<h1>Fragen</h1>
 		<button id="themeBtn" title="switch theme" onclick="switchTheme()"></button>
