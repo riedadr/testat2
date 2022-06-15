@@ -1,6 +1,5 @@
 # URL zur bereits lauffähigen Version
 Eine funktionierende Version der Umfrage ist unter <a href="https://t2.cit116.xyz" target="_blank">t2.cit116.xyz</a> erreichbar.
-Die Zertifikatswarnung bitte akzeptieren.
 
 # Anmerkungen
 Im Ordner "xhr" befindet sich noch eine funktionierende (aber nicht weiter verwendete) Variante mit XMLHttpRequest um die Informationen in die Datenbank zu schreiben.
